@@ -306,7 +306,7 @@ function App() {
               {dialogContent?.taskInfo ? <div className="pb-4 text-left text-white text-md md:text-2xl">
                 {dialogContent?.taskInfo}
               </div> : <></>}
-              {dialogContent?.joker ? <div className="pb-4 text-center text-white text-2xl md:text-8xl">dialogContent?.joker</div> : <></>}
+              {dialogContent?.joker ? <div className="pb-4 text-center text-white text-2xl md:text-8xl">{dialogContent?.joker}</div> : <></>}
               {dialogContent?.img ? <div className="overflow-hidden mb-4 max-h-[95%]"><img className="w-full object-cover pb-4" alt="" src={dialogContent.img}></img></div> : <></>}
               {dialogContent?.answer || dialogContent?.answerApi ? <button onClick={() => { getAnswerPerApi(); setIsAnswerOpen(true); }} className="w-full text-2xl bg-white p-3 rounded">Lösung</button> : (<></>)}
             </div>
@@ -330,7 +330,7 @@ function App() {
             <div className={`flex gap-4 pt-4 justify-around`}>
               {teams.map((team) => {
                 return (
-                  <div key={makeid()} onClick={() => onDialogClose(team)} className={`p-4 bg-white text-neutral-500 text-md md:text-xl rounded-xl hover:bg-white/80 cursor-pointer`}>{team}</div>
+                  <div key={makeid()} onClick={() => onDialogClose(team)} className={`p-4 bg-white text-neutral-500 text-sm md:text-xl rounded-xl hover:bg-white/80 cursor-pointer`}>{team}</div>
                 )
               })}
               <div onClick={() => onDialogClose("Keiner")} className={`p-4 bg-white text-neutral-500 text-md md:text-xl rounded-xl hover:bg-white/80 cursor-pointer`}>Keiner</div>
