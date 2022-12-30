@@ -261,13 +261,13 @@ function App() {
                 <h1 className="text-neutral-700 md:text-5xl text-xl">{played.winner}</h1>
               </div>
               <div className="table-cell align-middle">
-                <h1 className="md:text-8xl text-2xl">{field.title}</h1>
+                <h1 className="md:text-8xl text-4xl">{field.title}</h1>
               </div>
             </div>)
           } else {
             return (<div key={makeid()} onClick={() => { setDialogContent(field); setIsOpen(true); }} className={`cursor-pointer table text-white border-2 border-grey rounded ${field.bg}`}>
               <div className="table-cell align-middle">
-                <h1 className="md:text-8xl text-2xl">{field.title}</h1>
+                <h1 className="md:text-8xl text-4xl">{field.title}</h1>
               </div>
             </div>)
           }
