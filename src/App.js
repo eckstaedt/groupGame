@@ -295,7 +295,7 @@ function App() {
               <div className="flex">
                 <IoMdCloseCircle className="text-transparent"></IoMdCloseCircle>
                 <div className="w-full">{dialogContent?.dialogTitle}</div>
-                <IoMdCloseCircle className="cursor-pointer" onClick={() => setIsConfirmOpen(true)}></IoMdCloseCircle>
+                <IoMdCloseCircle className="text-6xl cursor-pointer" onClick={() => setIsConfirmOpen(true)}></IoMdCloseCircle>
               </div>
             </Dialog.Title>
 
@@ -330,10 +330,10 @@ function App() {
             <div className={`flex gap-4 pt-4 justify-around`}>
               {teams.map((team) => {
                 return (
-                  <div key={makeid()} onClick={() => onDialogClose(team)} className={`p-4 bg-white text-neutral-500 text-xl rounded-xl hover:bg-white/80 cursor-pointer`}>{team}</div>
+                  <div key={makeid()} onClick={() => onDialogClose(team)} className={`p-4 bg-white text-neutral-500 text-md md:text-xl rounded-xl hover:bg-white/80 cursor-pointer`}>{team}</div>
                 )
               })}
-              <div onClick={() => onDialogClose("Keiner")} className={`p-4 bg-white text-neutral-500 text-xl rounded-xl hover:bg-white/80 cursor-pointer`}>Keiner</div>
+              <div onClick={() => onDialogClose("Keiner")} className={`p-4 bg-white text-neutral-500 text-md md:text-xl rounded-xl hover:bg-white/80 cursor-pointer`}>Keiner</div>
             </div>
           </Dialog.Panel>
         </div>
@@ -348,7 +348,7 @@ function App() {
 
         <div className="fixed inset-0 flex items-center justify-center p-12">
           <Dialog.Panel onClick={() => setIsStatsDialogOpen(false)} className={`p-8 rounded-xl bg-slate-500`}>
-            <Dialog.Title className={`text-center text-6xl text-white`}>
+            <Dialog.Title className={`text-center text-3xl md:text-6xl text-white`}>
               {actuals?.length === 16 ? 'Finaler Stand' : 'Aktueller Stand'}
             </Dialog.Title>
 
@@ -356,9 +356,9 @@ function App() {
               {Object.keys(standings).map((teamId) => {
                 return (
                   <Fragment key={makeid()}>
-                    <div className={`text-center p-4 bg-white text-neutral-500 text-4xl rounded-xl`}>
+                    <div className={`text-center p-4 bg-white text-neutral-500 text-xl md:text-4xl rounded-xl`}>
                       <div>{teamId}</div>
-                      <div className="pt-4 text-6xl">{standings[teamId]}</div>
+                      <div className="pt-4 text-2xl md:text-6xl">{standings[teamId]}</div>
                     </div>
                   </Fragment>
                 )
@@ -397,13 +397,13 @@ function App() {
 
         <div className="fixed inset-0 flex items-center justify-center p-12">
           <Dialog.Panel className={`p-8 rounded-xl bg-slate-500`}>
-            <Dialog.Title className={`text-center text-5xl text-white`}>
+            <Dialog.Title className={`text-center text-3xl md:text-5xl text-white`}>
               Antwort
             </Dialog.Title>
 
-            <div className="pt-4 text-white text-3xl">{dialogContent?.answer}</div>
-            <div className="pt-4 text-white text-3xl transition-all">{dialogContent?.answerApiRes}</div>
-            <div className="pt-4 text-white text-xl">{dialogContent?.info}</div>
+            <div className="pt-4 text-white text-xl md:text-3xl">{dialogContent?.answer}</div>
+            <div className="pt-4 text-white text-xl md:text-3xl transition-all">{dialogContent?.answerApiRes}</div>
+            <div className="pt-4 text-white text-md md:text-xl">{dialogContent?.info}</div>
             {dialogContent?.imgAnswer ? <img alt="" src={dialogContent.imgAnswer}></img> : <></>}
           </Dialog.Panel>
         </div>
