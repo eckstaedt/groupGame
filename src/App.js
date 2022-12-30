@@ -290,8 +290,8 @@ function App() {
         <div className="fixed inset-0 bg-white/40" aria-hidden="true" />
 
         <div className="fixed inset-0 flex items-center justify-center p-12">
-          <Dialog.Panel className={`text-center relative p-4 sm:w-[60%] w-[90%] h-full rounded ${dialogContent?.bgDialog}`}>
-            <Dialog.Title className={`pb-4 text-center text-6xl text-white`}>
+          <Dialog.Panel className={`text-center relative p-4 sm:w-[60%] w-[98%] h-full rounded ${dialogContent?.bgDialog}`}>
+            <Dialog.Title className={`pb-4 text-center text-2xl md:text-6xl text-white`}>
               <div className="flex">
                 <IoMdCloseCircle className="text-transparent"></IoMdCloseCircle>
                 <div className="w-full">{dialogContent?.dialogTitle}</div>
@@ -300,13 +300,13 @@ function App() {
             </Dialog.Title>
 
             <div className="h-[90%]">
-              <div className="pb-4 text-left text-white text-3xl">
+              <div className="pb-4 text-left text-white text-xl md:text-3xl">
                 {dialogContent?.task}
               </div>
-              {dialogContent?.taskInfo ? <div className="pb-4 text-left text-white text-2xl">
+              {dialogContent?.taskInfo ? <div className="pb-4 text-left text-white text-md md:text-2xl">
                 {dialogContent?.taskInfo}
               </div> : <></>}
-              {dialogContent?.joker ? <div className="pb-4 text-center text-white text-8xl">dialogContent?.joker</div> : <></>}
+              {dialogContent?.joker ? <div className="pb-4 text-center text-white text-2xl md:text-8xl">dialogContent?.joker</div> : <></>}
               {dialogContent?.img ? <div className="overflow-hidden mb-4 max-h-[95%]"><img className="w-full object-cover pb-4" alt="" src={dialogContent.img}></img></div> : <></>}
               {dialogContent?.answer || dialogContent?.answerApi ? <button onClick={() => { getAnswerPerApi(); setIsAnswerOpen(true); }} className="w-full text-2xl bg-white p-3 rounded">Lösung</button> : (<></>)}
             </div>
