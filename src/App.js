@@ -291,11 +291,11 @@ function App() {
 
         <div className="fixed inset-0 flex items-center justify-center p-12">
           <Dialog.Panel className={`text-center relative p-4 sm:w-[60%] w-[98%] h-full rounded ${dialogContent?.bgDialog}`}>
-            <Dialog.Title className={`pb-4 text-center text-2xl md:text-6xl text-white`}>
+            <Dialog.Title className={`pb-4 text-center text-3xl md:text-6xl text-white`}>
               <div className="flex">
                 <IoMdCloseCircle className="text-transparent"></IoMdCloseCircle>
                 <div className="w-full">{dialogContent?.dialogTitle}</div>
-                <IoMdCloseCircle className="text-6xl cursor-pointer" onClick={() => setIsConfirmOpen(true)}></IoMdCloseCircle>
+                <IoMdCloseCircle className="md:text-6xl text-3xl cursor-pointer" onClick={() => setIsConfirmOpen(true)}></IoMdCloseCircle>
               </div>
             </Dialog.Title>
 
