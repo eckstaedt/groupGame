@@ -249,7 +249,7 @@ function App() {
         {header.map((field) => {
           return (<div key={makeid()} className={`table text-white border-2 border-grey rounded ${field.bg}`}>
             <div className="table-cell align-middle">
-              <h1 className="text-6xl">{field.title}</h1>
+              <h1 className="md:text-6xl text-2xl">{field.title}</h1>
             </div>
           </div>)
         })}
@@ -261,7 +261,7 @@ function App() {
                 <h1 className="text-neutral-700 text-5xl">{played.winner}</h1>
               </div>
               <div className="table-cell align-middle">
-                <h1 className="text-8xl">{field.title}</h1>
+                <h1 className="md:text-8xl text-2xl">{field.title}</h1>
               </div>
             </div>)
           } else {
